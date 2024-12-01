@@ -14,7 +14,7 @@ body {
 .container {
     padding: 30px 30px;
     width: 100%;
-    max-width: 500px;  
+    width: auto; 
     height: auto;
     background-color: #FCFCFC;
     position: absolute;
