@@ -4,17 +4,17 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-
 }
 
 body {
   background-color: #535353;
-  font-family: 'Archivo';
+  font-family: 'Archivo', sans-serif;
 }
 
 .container {
     padding: 30px 30px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;  
     height: auto;
     background-color: #FCFCFC;
     position: absolute;
@@ -26,14 +26,15 @@ body {
 
 .container p {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 1.25rem; 
     font-weight: 700;
 }
 
 input::placeholder {
-    font-family: 'Archivo';
+    font-family: 'Archivo', sans-serif;
 }
-.container input{
+
+.container input {
     border: 1px solid black;
     width: 100%;
     padding: 10px 20px;
@@ -44,7 +45,7 @@ input::placeholder {
 }
 
 .generateBtn {
-    font-family: 'Archivo';
+    font-family: 'Archivo', sans-serif;
     width: 100%;
     padding: 12px;
     margin-top: 20px;
@@ -56,16 +57,57 @@ input::placeholder {
 }
 
 #imgBox {
-    width: 100%;        /* Make sure the container is 100% of the parent width */
-    height: auto;       /* Let it grow based on the content */
-    margin-top: 20px;   /* Add some spacing from the button */
-    display: flex;      /* Ensure image can be centered */
-    justify-content: center; /* Center the image inside the container */
-    align-items: center;     /* Align the image vertically */
+    width: 100%;        
+    height: auto;      
+    margin-top: 20px;   
+    display: flex;      
+    justify-content: center; 
+    align-items: center;     
     border-radius: 5px;
 }
 
 #qrImage {
-    max-width: 100%;    /* Prevent the image from overflowing */
-    height: auto;       /* Maintain aspect ratio */
+    max-width: 100%;    
+    height: auto;       
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;  
+        padding: 20px;  /
+    }
+
+    .container p {
+        font-size: 1.125rem;  
+    }
+
+    .generateBtn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    #imgBox {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;  
+        padding: 15px;  
+    }
+
+    .container p {
+        font-size: 1rem;  
+    }
+
+    .generateBtn {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    #imgBox {
+        margin-top: 10px;  
+    }
 }
